@@ -1,0 +1,65 @@
+<!doctype html><html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ศูนย์รวมระบบงาน</title><meta name="theme-color" content="#ffe66d"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="รวมแอป"><meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;800&display=swap" rel="stylesheet"><style>*{box-sizing:border-box}html,body{margin:0;height:100%}
+:root{--bg:#ffe66d;--a2:#4ecdc4;--ink:#111;color-scheme:light}
+body{background:var(--bg);color:var(--ink);font-family:'Prompt','Noto Sans Thai Looped',system-ui,sans-serif;overflow-x:hidden}
+body::after{content:"";position:fixed;width:130px;height:130px;border:3px solid #111;border-radius:50%;background:var(--a2);right:-40px;bottom:-36px;z-index:0}
+[hidden]{display:none!important}
+.screen{position:fixed;inset:0;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:24px;text-align:center}
+.screen .gl{width:min(46vw,190px);height:auto;animation:wob 2.4s ease-in-out infinite}
+@keyframes wob{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg) translateY(-6px)}}
+h1{font-size:23px;margin:0;font-weight:800;background:#fff;border:3px solid #111;border-radius:14px;padding:6px 16px;box-shadow:4px 4px 0 #111}
+p{margin:0;font-size:15px;line-height:1.7;max-width:340px;font-weight:500}
+.bar{width:160px;height:14px;border-radius:99px;background:#fff;overflow:hidden;border:3px solid #111}.bar i{display:block;width:40%;height:100%;background:#ff6b6b;border-right:3px solid #111;animation:sw 1.2s linear infinite}
+@keyframes sw{from{transform:translateX(-100%)}to{transform:translateX(260%)}}
+button{font:inherit;font-weight:800;color:#111;background:var(--a2);border:3px solid #111;border-radius:14px;padding:10px 24px;box-shadow:4px 4px 0 #111;cursor:pointer}
+button:active{transform:translate(3px,3px);box-shadow:1px 1px 0 #111}
+:focus-visible{outline:3px solid #111;outline-offset:3px}
+#app{position:fixed;inset:0;z-index:2;width:100%;height:100%;border:0;padding-top:env(safe-area-inset-top);background:#fff}
+code{background:#fff;border:2px solid #111;border-radius:6px;padding:0 6px}
+@media (prefers-reduced-motion:reduce){.gl,.bar i{animation:none}}
+.wrap{position:relative;z-index:1;max-width:560px;margin:0 auto;padding:calc(env(safe-area-inset-top) + 22px) 18px 56px}
+header{display:flex;align-items:center;gap:14px;margin-bottom:22px}header .gl{width:80px;flex:none;transform:rotate(-4deg);animation:none}header h1{display:inline-block;transform:rotate(-2deg);font-size:22px}header p{margin-top:10px;font-size:14px}
+.tools{display:flex;gap:10px;margin-bottom:18px}.tools input{flex:1;min-width:0;font:inherit;font-weight:500;padding:9px 14px;border:3px solid #111;border-radius:14px;background:#fff;color:#111}.tools button{padding:8px 14px;font-size:14px;box-shadow:3px 3px 0 #111}
+.grid{display:grid;gap:16px}.card{display:flex;align-items:center;gap:14px;padding:12px 16px 12px 12px;border:3px solid #111;border-radius:16px;box-shadow:5px 5px 0 #111;color:#111;text-decoration:none;background:var(--c)}
+.card:active{transform:translate(4px,4px);box-shadow:1px 1px 0 #111}.card .ic{width:70px;height:70px;flex:none;background:#fff;border:3px solid #111;border-radius:14px;display:grid;place-items:center;font-size:34px}.card .ic svg{width:50px;height:50px}.card h2{margin:0 0 3px;font-size:17px;font-weight:800}.card p{font-size:13.5px;line-height:1.45}
+.sk{height:94px;border:3px dashed #111;border-radius:16px;opacity:.35}.note{margin:0 0 14px;font-size:13px;font-weight:500;background:#fff;border:2px solid #111;border-radius:10px;padding:6px 12px;max-width:none}
+.foot{margin-top:28px;text-align:center;font-size:13px;font-weight:500}.foot a{color:#111}
+#viewer{position:fixed;inset:0;z-index:20;background:#fff}#vf{position:absolute;inset:0;width:100%;height:100%;border:0;padding-top:env(safe-area-inset-top)}
+#vback{position:absolute;left:12px;bottom:calc(env(safe-area-inset-bottom) + 14px);z-index:2;padding:8px 16px;font-size:14px;box-shadow:3px 3px 0 #111}</style></head><body><div class="wrap"><header><svg class="gl" viewBox="0 0 64 64" aria-hidden="true"><rect x="8" y="8" width="21" height="21" rx="7" fill="#ff6b6b" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="35" y="8" width="21" height="21" rx="7" fill="#4ecdc4" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="8" y="35" width="21" height="21" rx="7" fill="#b69cff" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="35" y="35" width="21" height="21" rx="7" fill="#fff" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><circle cx="41" cy="43" r="1.7" fill="#111"/><circle cx="50" cy="43" r="1.7" fill="#111"/><path d="M41 49q4.5 3.5 9 0" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round"/></svg><div><h1 id="ttl">ศูนย์รวมระบบงาน</h1><p id="sub">ทางลัดไปยังระบบของหน่วยงานรังสีวิทยา</p></div></header>
+<p class="note" id="note" hidden></p><div class="tools"><input id="q" type="search" placeholder="ค้นหาระบบ" aria-label="ค้นหาระบบ" hidden><button type="button" id="rf">รีเฟรช</button></div>
+<main class="grid" id="grid"></main><p class="foot"><a id="adm" href="#" target="_blank" rel="noopener" hidden>สำหรับผู้ดูแล: จัดการรายการระบบ</a></p></div>
+<div id="viewer" hidden><iframe id="vf" title="ระบบ" allow="clipboard-write"></iframe><button type="button" id="vback">‹ กลับหน้ารวม</button></div>
+<script src="config.js"></script><script>(function(){
+var C=window.HUB_CONFIG||{},G={"leave": "<rect x=\"8\" y=\"12\" width=\"48\" height=\"44\" rx=\"9\" fill=\"#fff\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M8 25h48v-4a9 9 0 0 0-9-9H17a9 9 0 0 0-9 9z\" fill=\"#ff6b6b\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M20 7v10M44 7v10\" fill=\"none\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><circle cx=\"24\" cy=\"38\" r=\"2.4\" fill=\"#111\"/><circle cx=\"40\" cy=\"38\" r=\"2.4\" fill=\"#111\"/><ellipse cx=\"17\" cy=\"44\" rx=\"4\" ry=\"2.6\" fill=\"#ffb3b3\"/><ellipse cx=\"47\" cy=\"44\" rx=\"4\" ry=\"2.6\" fill=\"#ffb3b3\"/><path d=\"M28 44q4 4 8 0\" fill=\"none\" stroke=\"#111\" stroke-width=\"2.6\" stroke-linecap=\"round\"/>", "xray": "<rect x=\"29\" y=\"14\" width=\"6\" height=\"18\" fill=\"#ffe66d\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><rect x=\"12\" y=\"6\" width=\"38\" height=\"13\" rx=\"6.5\" fill=\"#fff\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><rect x=\"12\" y=\"6\" width=\"16\" height=\"13\" rx=\"6\" fill=\"#ff6b6b\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><rect x=\"8\" y=\"30\" width=\"48\" height=\"22\" rx=\"9\" fill=\"#ffe66d\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><rect x=\"14\" y=\"35\" width=\"36\" height=\"12\" rx=\"5\" fill=\"#fff\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><circle cx=\"19\" cy=\"55\" r=\"5\" fill=\"#ff6b6b\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><circle cx=\"45\" cy=\"55\" r=\"5\" fill=\"#ff6b6b\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><circle cx=\"27\" cy=\"41\" r=\"1.9\" fill=\"#111\"/><circle cx=\"37\" cy=\"41\" r=\"1.9\" fill=\"#111\"/><path d=\"M29 43.5q3 2.6 6 0\" fill=\"none\" stroke=\"#111\" stroke-width=\"2\" stroke-linecap=\"round\"/>", "hub": "<rect x=\"8\" y=\"8\" width=\"21\" height=\"21\" rx=\"7\" fill=\"#ff6b6b\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><rect x=\"35\" y=\"8\" width=\"21\" height=\"21\" rx=\"7\" fill=\"#4ecdc4\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><rect x=\"8\" y=\"35\" width=\"21\" height=\"21\" rx=\"7\" fill=\"#b69cff\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><rect x=\"35\" y=\"35\" width=\"21\" height=\"21\" rx=\"7\" fill=\"#fff\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><circle cx=\"41\" cy=\"43\" r=\"1.7\" fill=\"#111\"/><circle cx=\"50\" cy=\"43\" r=\"1.7\" fill=\"#111\"/><path d=\"M41 49q4.5 3.5 9 0\" fill=\"none\" stroke=\"#111\" stroke-width=\"2\" stroke-linecap=\"round\"/>"},PAL=['#ff9f9f','#7fe3dc','#fff','#b69cff','#ffe66d'],KEY='hub.cache.v1';
+var $=function(i){return document.getElementById(i)},grid=$('grid'),all=[];
+function store(v){try{if(v===undefined)return JSON.parse(localStorage.getItem(KEY)||'null');localStorage.setItem(KEY,JSON.stringify(v))}catch(e){return null}}
+function note(t){var n=$('note');n.textContent=t||'';n.hidden=!t}
+function safe(u){return /^(https:\/\/|\.{1,2}\/)/.test(String(u||''))}
+function open_(a){var u=String(a.url||'');if(!safe(u))return;
+ if(a.mode==='tab'){window.open(u,'_blank','noopener');return}
+ if(a.mode==='self'){location.href=u;return}
+ $('vf').src=u;$('viewer').hidden=false}
+$('vback').onclick=function(){$('vf').src='about:blank';$('viewer').hidden=true};
+function render(list){all=list||[];var q=($('q').value||'').trim().toLowerCase();grid.textContent='';
+ $('q').hidden=all.length<7;
+ all.filter(function(a){return !q||(a.name+' '+(a.desc||'')).toLowerCase().indexOf(q)>=0}).forEach(function(a,i){
+  var el=document.createElement('a');el.className='card';el.href='#';el.style.setProperty('--c',a.color||PAL[i%PAL.length]);
+  var ic=document.createElement('span');ic.className='ic';if(G[a.icon])ic.innerHTML='<svg viewBox="0 0 64 64">'+G[a.icon]+'</svg>';else ic.textContent=a.icon||'📱';
+  var d=document.createElement('div'),h=document.createElement('h2'),p=document.createElement('p');h.textContent=a.name;p.textContent=a.desc||'';d.appendChild(h);d.appendChild(p);
+  el.appendChild(ic);el.appendChild(d);el.onclick=function(e){e.preventDefault();open_(a)};grid.appendChild(el)});
+ if(!grid.children.length){var e=document.createElement('p');e.textContent=q?'ไม่พบระบบที่ค้นหา':'ยังไม่มีระบบในรายการ';grid.appendChild(e)}}
+function head(t,s){if(t)$('ttl').textContent=t;if(s)$('sub').textContent=s}
+function load(){var api=String(C.apiUrl||'').trim();
+ if(!api){render(C.fallback||[]);note('ยังไม่ได้ตั้งค่า apiUrl ใน config.js — แสดงรายการสำรอง');return}
+ $('adm').href=api+(api.indexOf('?')<0?'?':'&')+'page=admin';$('adm').hidden=false;
+ fetch(api+(api.indexOf('?')<0?'?':'&')+'action=list&t='+Date.now()).then(function(r){return r.json()}).then(function(d){
+  if(!d||!d.ok)throw new Error('bad');store(d);head(d.title,d.subtitle);note('');render(d.apps)
+ }).catch(function(){var c=store();if(c&&c.apps){head(c.title,c.subtitle);render(c.apps);note('เชื่อมต่อไม่ได้ — แสดงรายการล่าสุดที่บันทึกไว้')}else{render(C.fallback||[]);note('เชื่อมต่อไม่ได้ — แสดงรายการสำรอง')}})}
+$('q').oninput=function(){render(all)};$('rf').onclick=load;
+document.addEventListener('visibilitychange',function(){if(!document.hidden&&$('viewer').hidden)load()});
+var c0=store();if(c0&&c0.apps){head(c0.title,c0.subtitle);render(c0.apps)}else{grid.innerHTML='<div class="sk"></div><div class="sk"></div>'}
+load();
+if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(function(){});
+})();</script></body></html>
